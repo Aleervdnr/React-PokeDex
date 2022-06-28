@@ -1,0 +1,41 @@
+.App{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.poke-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  justify-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.poke-search{
+  position: relative;
+}
+
+.poke-search_input{
+  width: 180px;
+  height: 30px;
+  padding-left: 28px;
+  border: 0;
+  background-color: #e2dfdf;
+  border-radius: 8px;
+}
+
+.poke-search_button{
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  height: 100%;
+  border: 0px;
+  background-color: transparent;
+  /* background-color: aquamarine; */
+}

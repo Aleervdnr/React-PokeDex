@@ -1,0 +1,47 @@
+.paginacion{
+  display: flex;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.next{
+  height: 38px;
+  width: 80px;
+  position: relative;
+  border: 0px;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.next::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 100%;
+  background-color: rgb(146, 207, 207);
+  border-radius: 50%;
+  z-index: -1;
+  transition: .7s;
+
+}
+
+.next:hover::before{
+  border-radius: 25px;
+  width: 100%;
+  transition: .5s;
+}
+
+.next-icon{
+  position: absolute;
+  left: 40px;
+  transition: 1s;
+}
+
+.next:hover > .next-icon{ 
+  left: 55px;
+  transition: 1s;
+}
