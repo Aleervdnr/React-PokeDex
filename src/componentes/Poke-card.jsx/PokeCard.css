@@ -174,3 +174,13 @@
   width: 25px;
   height: 25px;
 }
+
+@media (max-width:425px){
+  .cardModal{
+    width: 80%;
+  }
+
+  .cardModal img{
+    width: 100%;
+  }
+}
