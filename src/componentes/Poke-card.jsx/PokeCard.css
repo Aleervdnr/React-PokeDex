@@ -128,8 +128,9 @@
 
 
 /*Modal*/
+/*Falta sacer el scroll al abrir modal*/
 .pokeCard_modal{
-  position: absolute;
+  position: fixed;
   background-color: rgba(0, 0, 0, .7);
   width: 100%;
   height: 100%;
