@@ -130,10 +130,47 @@
 /*Modal*/
 .pokeCard_modal{
   position: absolute;
-  background-color: black;
+  background-color: rgba(0, 0, 0, .7);
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   display: none;
+}
+
+.showModal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardModal{
+  position: relative;
+  height: 500px;
+  width: 350px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 18px;
+  display: grid;
+  text-align: center;
+}
+
+.cardModal img{
+  width: 350px;
+}
+
+
+
+.close{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
 }
