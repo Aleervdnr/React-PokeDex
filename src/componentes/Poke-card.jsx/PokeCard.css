@@ -156,6 +156,10 @@
   text-align: center;
 }
 
+.no-scroll{
+  overflow: hidden;
+}
+
 .cardModal img{
   width: 350px;
 }
