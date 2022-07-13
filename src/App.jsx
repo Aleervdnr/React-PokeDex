@@ -50,16 +50,31 @@ function App() {
     getPokemons()
   },[page])
 
+  const [clickedNext, setClickedNext] = useState(false)
+  const [clickedPrevius, setClickedPrevius] = useState(false)
+
  const nextPage = () => {
   //Math.min devuelve el valor minimo y no deja que el pagination se pase del total
   const nextPage = Math.min(page + 1,total)
   setPage(nextPage)
+  if(page < total){
+    setClickedNext(true)
+    setTimeout(()=>{
+      setClickedNext(false)
+    },1000)
+  }
  }
 
  const previusPage = () => {
   //Math.max devuelve el valor maximo
   const lastPage = Math.max(page - 1, 0)
     setPage(lastPage)
+    if(page > 0){
+      setClickedPrevius(true)
+      setTimeout(()=>{
+        setClickedPrevius(false)
+      },1000)
+    }
   }
  
 
@@ -84,7 +99,7 @@ function App() {
           <AiOutlineSearch/>
         </button>
       </div>
-        <Paginacion nextPage={nextPage} previusPage={previusPage} page={page} totalPages={total} />
+        <Paginacion nextPage={nextPage} previusPage={previusPage} page={page} totalPages={total} clickedNext={clickedNext} clickedPrevius={clickedPrevius} />
       
         {loading ?
            <Loading/>
