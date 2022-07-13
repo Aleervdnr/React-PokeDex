@@ -1,7 +1,9 @@
 .paginacion{
   display: flex;
+  align-items: center;
   margin-top: 20px;
   gap: 15px;
+  align-self: end;
 }
 
 .next{

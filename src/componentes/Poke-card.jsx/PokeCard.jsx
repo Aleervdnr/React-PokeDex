@@ -2,15 +2,18 @@ import React,{useState} from 'react'
 import "./PokeCard.css"
 
 function PokeCard({id,name,avatar,types}) {
-  const [modal, setModal] = useState(false)  
+  const [modal, setModal] = useState(false)
+  const [fav, setfav] = useState(false)
 
   return (
     <>
-          <div className={`pokeCard ${types[0].type.name}`} onClick={()=> {setModal(true); document.body.classList.add("no-scroll")}}>
+          <div className={`pokeCard `} onClick={()=> {setModal(true); document.body.classList.add("no-scroll")}}>
       <img src={avatar} alt={name} className="pokeCard_img"/>
 
       <div className="poke-container">
         <h2 className="pokeCard_title">{name}</h2>
+
+        <div className="heart" onClick={() => setfav(!fav)}> {fav ? <span>&#10084;&#65039;</span>  : "🤍"}</div>
 
         <div className="types">
           {types.map(type => <div className={`type type-${type.type.name}`} >{type.type.name}</div> )}
