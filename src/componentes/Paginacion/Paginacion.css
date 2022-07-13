@@ -6,7 +6,12 @@
   align-items: center;
   margin-top: 20px;
   gap: 15px;
-  align-self: end;
+}
+
+@media (min-width:1024px){
+  .paginacion{
+    align-self: end;
+  }
 }
 
 .next,.previus{
