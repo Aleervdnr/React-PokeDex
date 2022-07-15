@@ -31,3 +31,13 @@ export const getPokemonData = async (url) => {
     }
     catch(err){}
 }
+
+export const getFavoritesApi = async (name) => {
+    try{
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+        const data = response.json()
+
+        return data
+    }
+    catch(err){}
+}
